@@ -38,23 +38,6 @@ curl -O https://raw.github.com/causes/sass-enhance/master/_sass-enhance.css.scss
 wget https://raw.github.com/causes/sass-enhance/master/_sass-enhance.css.scss
 ```
 
-## Configuring breakpoints
-
-To configure your breakpoints, set the `$breakpoint-max-widths` variable
-*before importing sass-enhance*.
-
-This variable is a comma separated list of breakpoint names and max-width
-pairs. You can choose whatever names and widths you prefer. The default is
-something like:
-
-```scss
-$breakpoint-max-widths: mobile           360px,
-                        mobile-landscape 500px,
-                        small-tablet     640px,
-                        tablet           959px,
-                        desktop          99999px;
-```
-
 ## Using
 
 sass-enhance defines mixins for media queries, `enhance` and `degrade`.
@@ -133,6 +116,23 @@ following SCSS:
     padding: 1em;
   }
 }
+```
+
+## Configuring breakpoints
+
+To configure your breakpoints, set the `$breakpoint-max-widths` variable
+*before importing sass-enhance*.
+
+This variable is a comma separated list of breakpoint names and max-width
+pairs. You can choose whatever names and widths you prefer. The default is
+something like:
+
+```scss
+$breakpoint-max-widths: mobile           360px,
+                        mobile-landscape 500px,
+                        small-tablet     640px,
+                        tablet           959px,
+                        desktop          99999px;
 ```
 
 ## License
