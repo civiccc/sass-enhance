@@ -14,6 +14,13 @@ To install sass-enhance using [Bower](http://bower.io), simply run:
 bower install sass-enhance
 ```
 
+If you'd like to save sass-enhance as a dependency in your project's
+`bower.json` manifest file, run:
+
+```bash
+bower install --save sass-enhance
+```
+
 ### Manually
 
 Simply download the `_sass-enhance.css.scss` file from this repo and place it
