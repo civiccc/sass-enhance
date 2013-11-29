@@ -4,6 +4,25 @@ Sass mixins that enable the implementaiton of a responsive design with a
 progressive enhancement approach. Originally written for use at
 [Causes](https://github.com/causes).
 
+## Installing
+
+### Manually
+
+Simply download the `_sass-enhance.css.scss` file from this repo and place it
+somewhere useful.
+
+#### `curl`
+
+```bash
+curl -O https://raw.github.com/causes/sass-enhance/master/_sass-enhance.css.scss
+```
+
+#### `wget`
+
+```bash
+wget https://raw.github.com/causes/sass-enhance/master/_sass-enhance.css.scss
+```
+
 ## Configuring breakpoints
 
 To configure your breakpoints, set the `$breakpoint-max-widths` variable
