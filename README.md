@@ -63,6 +63,9 @@ These mixins each take a breakpoint as an argument, and a block of styles to
 apply when that breakpoint is activated. Optionally, you can specify ranged
 breakpoints using `until`.
 
+Breakpoints can be named, as defined in the `$breakpoint-max-widths` variable
+(e.g. "tablet"), or arbitrary widths (e.g. "720px").
+
 ### `enhance`
 
 The `enhance` mixin is used to apply styles to a selector as the viewport gets
