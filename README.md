@@ -55,6 +55,83 @@ $breakpoint-max-widths: mobile           360px,
                         desktop          99999px;
 ```
 
+## Using
+
+sass-enhance defines mixins for media queries, `enhance` and `degrade`.
+
+These mixins each take a breakpoint as an argument, and a block of styles to
+apply when that breakpoint is activated. Optionally, you can specify ranged
+breakpoints using `until`.
+
+### `enhance`
+
+The `enhance` mixin is used to apply styles to a selector as the viewport gets
+wider. It can be used to progressively enhance a page. We prefer using
+`enhance` over `degrade` because it is a mobile-first implementation that tends
+to be simpler in its execution.
+
+To adjust the padding from 1em to 2em at the desktop breakpoint and wider, you
+could use the following SCSS:
+
+```scss
+.my-selector {
+  padding: 1em;
+
+  @include enhance(desktop) {
+    padding: 2em;
+  }
+}
+```
+
+If you wanted to only apply a different amount of padding for only the tablet
+viewport width and nothing wider or narrower, you could use the following SCSS:
+
+```scss
+.my-selector {
+  padding: 1em;
+
+  @include enhance(tablet until desktop) {
+    padding: 2em;
+  }
+}
+```
+
+
+### `degrade`
+
+There are some cases where `enhance` does not work or make sense. In these
+cases, it is okay to use `degrade` to gracefully degrade the styles as the
+viewport gets narrower.
+
+To adjust the padding from 2em to 1em at the tablet breakpoint and narrower,
+you could use the following SCSS:
+
+```scss
+.my-selector {
+  padding: 2em;
+
+  @include degrade(tablet) {
+    padding: 1em;
+  }
+}
+```
+
+Note: this produces functionally equivalent styles as the first example.
+
+Likewise, if you wanted to only apply a different amount of padding for only
+the tablet viewport width and nothing wider or narrower, you could use the
+following SCSS:
+
+```scss
+.my-selector {
+  padding: 2em;
+
+  @include degrade(tablet until small-tablet) {
+    padding: 1em;
+  }
+}
+```
+
 ## License
 
 Released under the MIT License.
