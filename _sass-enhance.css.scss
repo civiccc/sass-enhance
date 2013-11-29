@@ -1,0 +1,72 @@
+$breakpoint-max-widths: mobile           360px,
+                        mobile-landscape 500px,
+                        small-tablet     640px,
+                        tablet           959px,
+                        desktop          99999px;
+
+@function breakpoint-width($breakpoint, $edge: min) {
+  $min-width: 0px;
+  @each $breakpoint-max-width in $breakpoint-max-widths {
+    $breakpoint-name: nth($breakpoint-max-width, 1);
+    $breakpoint-px:   nth($breakpoint-max-width, 2);
+    @if $breakpoint-name == $breakpoint {
+      @if ($edge == min) {
+        @return $min-width;
+      } @else {
+        @return $breakpoint-px;
+      }
+    }
+    $min-width: $breakpoint-px + 1px;
+  }
+  @return $breakpoint;
+}
+
+@function breakpoint-min-width($breakpoint-name) {
+  @return breakpoint-width($breakpoint-name, min);
+}
+
+@function breakpoint-max-width($breakpoint-name) {
+  @return breakpoint-width($breakpoint-name, max);
+}
+
+@function parse-breakpoint($breakpoint) {
+  @if length($breakpoint) == 3 and nth($breakpoint, 2) == 'until' {
+    @return (nth($breakpoint, 1) nth($breakpoint, 3));
+  } @else {
+    @return $breakpoint;
+  }
+}
+
+@mixin enhance($breakpoint) {
+  $breakpoint: parse-breakpoint($breakpoint);
+  @if length($breakpoint) == 1 {
+    @media only screen and (min-width: breakpoint-min-width($breakpoint)) {
+      @content;
+    }
+  } @else {
+    $from:  nth($breakpoint, 1);
+    $until: nth($breakpoint, 2);
+    @media only screen and
+      (min-width: breakpoint-min-width($from)) and
+      (max-width: breakpoint-min-width($until) - 1) {
+      @content;
+    }
+  }
+}
+
+@mixin degrade($breakpoint) {
+  $breakpoint: parse-breakpoint($breakpoint);
+  @if length($breakpoint) == 1 {
+    @media only screen and (max-width: breakpoint-max-width($breakpoint)) {
+      @content;
+    }
+  } @else {
+    $from:  nth($breakpoint, 1);
+    $until: nth($breakpoint, 2);
+    @media only screen and
+      (max-width: breakpoint-max-width($from)) and
+      (min-width: breakpoint-max-width($until) + 1) {
+      @content;
+    }
+  }
+}
