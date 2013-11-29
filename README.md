@@ -6,6 +6,14 @@ progressive enhancement approach. Originally written for use at
 
 ## Installing
 
+### Bower
+
+To install sass-enhance using [Bower](http://bower.io), simply run:
+
+```bash
+bower install sass-enhance
+```
+
 ### Manually
 
 Simply download the `_sass-enhance.css.scss` file from this repo and place it
