@@ -1,5 +1,7 @@
 # sass-enhance
 
+[![Bower version](https://badge.fury.io/bo/sass-enhance.svg)](http://badge.fury.io/bo/sass-enhance)
+
 Sass mixins that enable the implementaiton of a responsive design with a
 progressive enhancement approach. Originally written for use at
 [Causes](https://github.com/causes).
