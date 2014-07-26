@@ -31,13 +31,13 @@ somewhere useful.
 #### `curl`
 
 ```bash
-curl -O https://raw.github.com/causes/sass-enhance/master/_sass-enhance.css.scss
+curl -O https://raw.githubusercontent.com/causes/sass-enhance/master/_sass-enhance.css.scss
 ```
 
 #### `wget`
 
 ```bash
-wget https://raw.github.com/causes/sass-enhance/master/_sass-enhance.css.scss
+wget https://raw.githubusercontent.com/causes/sass-enhance/master/_sass-enhance.css.scss
 ```
 
 ## Using
