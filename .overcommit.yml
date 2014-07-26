@@ -1,0 +1,7 @@
+CommitMsg:
+  GerritChangeId:
+    enabled: true
+
+PreCommit:
+  ScssLint:
+    enabled: false
