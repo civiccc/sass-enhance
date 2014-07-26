@@ -89,7 +89,7 @@ $breakpoint-max-widths: mobile           360px,
 // block of styles in a media query that applies the styles as the viewport
 // gets narrower. This can be used to gracefully degrade a page.
 @mixin degrade($breakpoint) {
-  $breakpoint: parse-breakpoint($breakpoint);
+  $breakpoint: _parse-breakpoint($breakpoint);
   @if length($breakpoint) == 1 {
     // non-ranged breakpoint
     @media only screen and (max-width: _breakpoint-max-width($breakpoint)) {
