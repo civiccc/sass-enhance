@@ -3,11 +3,13 @@
 //
 // This variable is a comma separated list of breakpoint names and max-width
 // pairs. You can choose whatever names and widths you prefer.
-$breakpoint-max-widths: mobile           360px,
-                        mobile-landscape 500px,
-                        small-tablet     640px,
-                        tablet           959px,
-                        desktop          99999px !default;
+//
+// These are the breakpoints used in Bootstrap v3.
+// See: http://getbootstrap.com/css/#grid
+$breakpoint-max-widths: extra-small      767px,
+                        small            991px,
+                        medium           1199px,
+                        large            99999px !default;
 
 // Helper method to find the width of the named breakpoint for the given edge
 // (i.e. min-width or max-width)

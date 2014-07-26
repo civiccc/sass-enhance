@@ -49,7 +49,8 @@ apply when that breakpoint is activated. Optionally, you can specify ranged
 breakpoints using `until`.
 
 Breakpoints can be named, as defined in the `$breakpoint-max-widths` variable
-(e.g. "tablet"), or arbitrary widths (e.g. "720px").
+(e.g. "tablet"), or arbitrary widths (e.g. "720px"). By default, the
+breakpoints in [the Bootstrap grid](http://getbootstrap.com/css/#grid) are used.
 
 ### `enhance`
 
