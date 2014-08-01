@@ -120,6 +120,28 @@ following SCSS:
 }
 ```
 
+### `breakpoint-min-width`
+
+This mixin will return the min-width of a named breakpoint. The min-width is
+defined as the pixel value of the previous named breakpoint, plus one pixel.
+
+```scss
+.my-selector {
+  min-width: breakpoint-min-width(tablet); // 641px with default settings
+}
+```
+
+### `breakpoint-max-width`
+
+Returns the max-width of a named breakpoint. This is the raw pixel value
+associated with the named breakpoint in the `$breakpoint-max-widths` variable.
+
+```scss
+.my-selector {
+  max-width: breakpoint-max-width(tablet); // 959px with default settings
+}
+```
+
 ## Configuring breakpoints
 
 To configure your breakpoints, set the `$breakpoint-max-widths` variable
