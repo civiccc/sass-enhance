@@ -49,7 +49,7 @@ apply when that breakpoint is activated. Optionally, you can specify ranged
 breakpoints using `until`.
 
 Breakpoints can be named, as defined in the `$breakpoint-max-widths` variable
-(e.g. "tablet"), or arbitrary widths (e.g. "720px"). By default, the
+(e.g. "small"), or arbitrary widths (e.g. "720px"). By default, the
 breakpoints in [the Bootstrap grid](http://getbootstrap.com/css/#grid) are used.
 
 ### `enhance`
@@ -59,27 +59,27 @@ wider. It can be used to progressively enhance a page. We prefer using
 `enhance` over `degrade` because it is a mobile-first implementation that tends
 to be simpler in its execution.
 
-To adjust the padding from 1em to 2em at the desktop breakpoint and wider, you
+To adjust the padding from 1em to 2em at the medium breakpoint and wider, you
 could use the following SCSS:
 
 ```scss
 .my-selector {
   padding: 1em;
 
-  @include enhance(desktop) {
+  @include enhance(medium) {
     padding: 2em;
   }
 }
 ```
 
-If you wanted to only apply a different amount of padding for only the tablet
+If you wanted to only apply a different amount of padding for only the small
 viewport width and nothing wider or narrower, you could use the following SCSS:
 
 ```scss
 .my-selector {
   padding: 1em;
 
-  @include enhance(tablet until desktop) {
+  @include enhance(small until medium) {
     padding: 2em;
   }
 }
@@ -92,14 +92,14 @@ There are some cases where `enhance` does not work or make sense. In these
 cases, it is okay to use `degrade` to gracefully degrade the styles as the
 viewport gets narrower.
 
-To adjust the padding from 2em to 1em at the tablet breakpoint and narrower,
+To adjust the padding from 2em to 1em at the small breakpoint and narrower,
 you could use the following SCSS:
 
 ```scss
 .my-selector {
   padding: 2em;
 
-  @include degrade(tablet) {
+  @include degrade(small) {
     padding: 1em;
   }
 }
@@ -108,14 +108,14 @@ you could use the following SCSS:
 Note: this produces functionally equivalent styles as the first example.
 
 Likewise, if you wanted to only apply a different amount of padding for only
-the tablet viewport width and nothing wider or narrower, you could use the
+the small viewport width and nothing wider or narrower, you could use the
 following SCSS:
 
 ```scss
 .my-selector {
   padding: 2em;
 
-  @include degrade(tablet until small-tablet) {
+  @include degrade(small until medium) {
     padding: 1em;
   }
 }
@@ -128,7 +128,7 @@ defined as the pixel value of the previous named breakpoint, plus one pixel.
 
 ```scss
 .my-selector {
-  min-width: breakpoint-min-width(tablet); // 641px with default settings
+  min-width: breakpoint-min-width(small); // 768px with default settings
 }
 ```
 
@@ -139,7 +139,7 @@ associated with the named breakpoint in the `$breakpoint-max-widths` variable.
 
 ```scss
 .my-selector {
-  max-width: breakpoint-max-width(tablet); // 959px with default settings
+  max-width: breakpoint-max-width(small); // 991px with default settings
 }
 ```
 
@@ -153,11 +153,10 @@ pairs. You can choose whatever names and widths you prefer. The default is
 something like:
 
 ```scss
-$breakpoint-max-widths: mobile           360px,
-                        mobile-landscape 500px,
-                        small-tablet     640px,
-                        tablet           959px,
-                        desktop          99999px;
+$breakpoint-max-widths: extra-small      767px,
+                        small            991px,
+                        medium           1199px,
+                        large            99999px !default;
 ```
 
 ## License
