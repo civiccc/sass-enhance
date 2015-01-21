@@ -2,7 +2,7 @@
   "name": "sass-enhance",
   "version": "0.1.0",
   "authors": [
-    "Joe Lencioni <joe.lencioni@causes.com>"
+    "Joe Lencioni <joe.lencioni@brigade.com>"
   ],
   "description": "Sass mixins that enable the implementation of a responsive design with a progressive enhancement approach.",
   "main": "_sass-enhance.scss",
@@ -20,5 +20,5 @@
     "progressiveenhancement"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/causes/sass-enhance"
+  "homepage": "https://github.com/brigade/sass-enhance"
 }
