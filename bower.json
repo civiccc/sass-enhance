@@ -5,7 +5,7 @@
     "Joe Lencioni <joe.lencioni@causes.com>"
   ],
   "description": "Sass mixins that enable the implementation of a responsive design with a progressive enhancement approach.",
-  "main": "_sass-enhance.css.scss",
+  "main": "_sass-enhance.scss",
   "keywords": [
     "sass",
     "scss",

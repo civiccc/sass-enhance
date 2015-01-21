@@ -25,19 +25,19 @@ bower install --save sass-enhance
 
 ### Manually
 
-Simply download the `_sass-enhance.css.scss` file from this repo and place it
+Simply download the `_sass-enhance.scss` file from this repo and place it
 somewhere useful.
 
 #### `curl`
 
 ```bash
-curl -O https://raw.githubusercontent.com/causes/sass-enhance/master/_sass-enhance.css.scss
+curl -O https://raw.githubusercontent.com/causes/sass-enhance/master/_sass-enhance.scss
 ```
 
 #### `wget`
 
 ```bash
-wget https://raw.githubusercontent.com/causes/sass-enhance/master/_sass-enhance.css.scss
+wget https://raw.githubusercontent.com/causes/sass-enhance/master/_sass-enhance.scss
 ```
 
 ## Using
