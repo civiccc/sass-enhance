@@ -19,6 +19,9 @@
     "enhancement",
     "progressiveenhancement"
   ],
+  "ignore": [
+    ".overcommit.yml"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/brigade/sass-enhance"
 }
