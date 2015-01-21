@@ -1,6 +1,6 @@
 # sass-enhance Changelog
 
-# master (unreleased)
+# 0.2.0
 
 - Switch default breakpoints to the Bootstrap 3 grid.
 - Drop ".css" from filename.
