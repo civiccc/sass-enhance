@@ -1,0 +1,30 @@
+{
+  "name": "sass-enhance",
+  "version": "0.2.0",
+  "description": "Sass mixins that enable the implementation of a responsive design with a progressive enhancement approach.",
+  "main": "_sass_enhance.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brigade/sass-enhance.git"
+  },
+  "keywords": [
+    "Sass",
+    "responsive",
+    "mixin",
+    "responsive",
+    "design",
+    "progressive",
+    "enhancement",
+    "media",
+    "queries"
+  ],
+  "author": "Joe Lencioni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brigade/sass-enhance/issues"
+  },
+  "homepage": "https://github.com/brigade/sass-enhance#readme"
+}
