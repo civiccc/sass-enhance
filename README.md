@@ -8,6 +8,21 @@ progressive enhancement approach. Originally written for use at
 
 ## Installing
 
+### npm
+
+To install sass-enhance using [npm](https://www.npmjs.org), simply run:
+
+```bash
+npm install sass-enhance
+```
+
+If you'd like to save sass-enhance as a dependency in your project's
+`package.json` file, run:
+
+```bash
+npm install --save sass-enhance
+```
+
 ### Bower
 
 To install sass-enhance using [Bower](http://bower.io), simply run:
